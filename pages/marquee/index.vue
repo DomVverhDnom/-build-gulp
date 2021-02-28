@@ -3,9 +3,9 @@
     <div v-for="item in countClone" :key="item" ref="first" class="first_img">
       <img src="../../static/img/3000x200.jpg" />
     </div>
-    <div class="second_img">
+    <!-- <div class="second_img">
       <img src="../../static/img/3000x200.jpg" />
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -22,7 +22,7 @@ export default {
     countFunc() {
       const imageEl = this.$refs.first[0];
       const imageElWidth = imageEl.getBoundingClientRect();
-      debugger;
+
       // this.countClone = Math.floor(this.windowWidth / imageElWidth) + 1;
     }
   },
@@ -34,6 +34,7 @@ export default {
     const imagePreload = new Promise((resolve, reject) => {
       const image = new Image();
       image.src = "/img/3000x200.jpg";
+      console.log(image.src);
       image.onload = () => resolve();
     }).then(() => {
       this.countFunc();
@@ -46,7 +47,7 @@ export default {
   display: flex;
 .first_img
   // overflow hidden
-  animation: marquee 3s infinite;
+  animation: marquee 3s linear infinite;
 
 @keyframes marquee
     100%

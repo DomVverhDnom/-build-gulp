@@ -12,6 +12,9 @@
       <div class="events__weather">
         <NuxtLink to="marquee" class="title">Бегущая строка</NuxtLink>
       </div>
+      <div class="events__weather">
+        <NuxtLink to="slider2" class="title">Слайдер</NuxtLink>
+      </div>
     </div>
   </div>
 </template>
