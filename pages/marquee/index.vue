@@ -27,18 +27,18 @@ export default {
     }
   },
   mounted() {
-    window.onresize = () => {
-      (this.windowWidth = window.innerWidth),
-        (this.windowHeight = window.innerHeight);
-    };
-    const imagePreload = new Promise((resolve, reject) => {
-      const image = new Image();
-      image.src = "/img/3000x200.jpg";
-      console.log(image.src);
-      image.onload = () => resolve();
-    }).then(() => {
-      this.countFunc();
-    });
+    // window.onresize = () => {
+    //   (this.windowWidth = window.innerWidth),
+    //     (this.windowHeight = window.innerHeight);
+    // };
+    // const imagePreload = new Promise((resolve, reject) => {
+    //   const image = new Image();
+    //   image.src = "/img/3000x200.jpg";
+    //   console.log(image.src);
+    //   image.onload = () => resolve();
+    // }).then(() => {
+    this.countFunc();
+    // });
   }
 };
 </script>
